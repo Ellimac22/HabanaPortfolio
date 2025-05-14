@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habana Website</title>
+    <link rel="stylesheet" href="mystyles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="myhobbies.html">My Hobbies</a>
+        <a href="mycontact.html">Contact</a>
+        <div class="dropdown">
+            <select id="activityDropdown" class="dropdown-select" onchange="navigateToPage()">
+            <option value="">Activity/Exercise</option>
+            <option value="laboratories.html">Laboratories</option>
+            <option value="exercises.html">Exercises</option>
+            <option value="exercises_code.html">Exercises Code</option>
+            </select>
+        </div>
+    </div>
+    <div class="profile">
+        <img src="profile.jpg" alt="Profile Picture">
+        <h1>Hi, I'm Camille Sindac Habana</h1>
+        <p>A BSIT Student of Aurora State College of Technology.<br></p>
+    </div>
+    <script>
+        function navigateToPage() {
+      const dropdown = document.getElementById("activityDropdown");
+      const selectedValue = dropdown.value;
+      if (selectedValue) {
+        window.location.href = selectedValue;
+      }
+    }
+    </script>
+</body>
+</html>
